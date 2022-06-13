@@ -8,7 +8,7 @@ from django.shortcuts import render
 
 #-- TemplateView
 class IndexView(TemplateView):
-    template_name = 'nomad/index.html'
+    template_name = 'app_nomad/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
