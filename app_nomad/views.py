@@ -12,7 +12,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['model_list'] = ['Region', 'Coworking', 'Accomodation']
+        context['model_list'] = ['Region', 'Coworking', 'Accommodation']
         return context
 
 #-- ListView

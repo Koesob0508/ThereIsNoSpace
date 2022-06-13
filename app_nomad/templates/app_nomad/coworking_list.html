@@ -1,0 +1,10 @@
+{% extends "base_nomad.html" %}
+
+{% block content %}
+    <h2>Coworking Space List</h2>
+    <ul>
+        {% for coworking in object_list %}
+            <li><a href="{% url 'nomad:coworking_detail' coworking.id %}">{{ coworking.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

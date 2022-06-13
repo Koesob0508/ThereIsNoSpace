@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<title>{% block title %}Nomad Application Site{% endblock title %}</title>
+
+{% block sidebar %}
+{{ block.super }}
+<ul>
+    <li><a href="/nomad/">Nomad_Home</a></li>
+</ul>
+{% endblock %}

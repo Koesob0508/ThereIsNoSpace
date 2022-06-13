@@ -1,0 +1,12 @@
+{% extends "base_nomad.html" %}
+
+{% block content %}
+    <h2>Nomad Management System</h2>
+    <ul>
+        {% for modelname in model_list %}
+{% with "nomad:"|add:modelname|lower as urlvar %}
+            <li><a href="{% url urlvar %}">{{ modelname }}</a></li>
+{% endwith %}
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "base_nomad.html" %}
+
+{% block content %}
+    <h2>Region List</h2>
+    <ul>
+        {% for region in object_list %}
+            <li><a href="{% url 'nomad:region_detail' region.id %}">{{ region.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
