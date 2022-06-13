@@ -17,7 +17,7 @@
         {% for accommodation in object.accommodation_set.all %}
             <li><a href="{% url 'nomad:accommodation_detail' accommodation.id %}">{{ accommodation.name }}</a></li>
         {% endfor %}
-        <a href="{% url 'nomad:accommodation_new' %}"><span class="glyphicon glyphicon-plus">Add Coworking Space</span></a>
+        <a href="{% url 'nomad:accommodation_new' %}"><span class="glyphicon glyphicon-plus">Add Accommodation</span></a>
     </ul>
 </li>
 {% endblock content %}

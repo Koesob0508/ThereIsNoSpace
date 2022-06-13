@@ -6,5 +6,6 @@
         {% for accommodation in object_list %}
             <li><a href="{% url 'nomad:accommodation_detail' accommodation.id %}">{{ accommodation.name }}</a></li>
         {% endfor %}
+        <a href="{% url 'nomad:accommodation_new' %}"><span class="glyphicon glyphicon-plus">Add Accommodation</span></a>
     </ul>
 {% endblock content %}
