@@ -23,4 +23,12 @@ urlpatterns = [
 
     # /nomad/accommodation/99
     path('accommodation/<int:pk>/', views.AccommodationDetail.as_view(), name='accommodation_detail'),
+
+    path('coworking/new/', views.coworking_new, name='coworking_new'),
+
+    path('coworking/<int:pk>/edit/', views.coworking_edit, name='coworking_edit'),
+
+    path('accommodation/new/', views.accommodation_new, name='accommodation_new'),
+
+    path('accommodation/<int:pk>/edit/', views.accommodation_edit, name='accommodation_edit'),
 ]

@@ -4,7 +4,7 @@
     <h2>Accommodation List</h2>
     <ul>
         {% for accommodation in object_list %}
-            <li><a href="{% url 'nomad:accommodation_detal' accommodation.id %}">{{ accommodation.name }}</a></li>
+            <li><a href="{% url 'nomad:accommodation_detail' accommodation.id %}">{{ accommodation.name }}</a></li>
         {% endfor %}
     </ul>
 {% endblock content %}

@@ -3,11 +3,13 @@
 {% block content %}
 <h1>{{ object.name }}</h1>
 <br>
-<li>Coworking Spaces : 
+<li>Coworking Spaces :
+    
     <ul>
         {% for coworking in object.coworking_set.all %}
             <li><a href="{% url 'nomad:coworking_detail' coworking.id %}">{{ coworking.name }}</a></li>
         {% endfor %}
+        <a href="{% url 'nomad:coworking_new' %}"><span class="glyphicon glyphicon-plus">Add Coworking Space</span></a>
     </ul>
 </li>
 <li>Accommodations : 
@@ -15,6 +17,7 @@
         {% for accommodation in object.accommodation_set.all %}
             <li><a href="{% url 'nomad:accommodation_detail' accommodation.id %}">{{ accommodation.name }}</a></li>
         {% endfor %}
+        <a href="{% url 'nomad:accommodation_new' %}"><span class="glyphicon glyphicon-plus">Add Coworking Space</span></a>
     </ul>
 </li>
 {% endblock content %}

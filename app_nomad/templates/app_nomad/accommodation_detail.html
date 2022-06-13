@@ -6,4 +6,5 @@
 <p>Phone Number : {{ object.phone_number }}</p>
 <p>URL : {{ object.url }}</p>
 <p>Content : {{ object.content }}</p>
+<a class="btn btn-default" href="{% url 'nomad:accommodation_edit' pk=accommodation.pk %}"><span class="glyphicon glyphicon-pencil">Edit Accommodation</span></a>
 {% endblock content %}
