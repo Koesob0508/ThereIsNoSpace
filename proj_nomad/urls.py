@@ -23,4 +23,5 @@ urlpatterns = [
     path('nomad/', include('app_nomad.urls')),
     path('books/', include('books.urls')),
     path('polls/', include('polls.urls')),
+    path('blog/', include('blog.urls')),
 ]
