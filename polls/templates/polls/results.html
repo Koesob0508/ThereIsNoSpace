@@ -1,0 +1,17 @@
+{% extends "base_polls.html" %}
+
+{% block content %}
+
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <!-- choice.votes\pluralize 는 choice.votes 값에 따라 복수 접미사(s)를 붙여주는 것이다. -->
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<!-- cf) reverse('polls:detail', args=(question.id,))-->
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+
+{% endblock content %}

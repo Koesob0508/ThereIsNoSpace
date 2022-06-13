@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rfc&p*(oe^p70pd5&ritj+$7@kqiyh$#**&7l+6e!)80^)#wb@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.pythonanywhere.com']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_nomad.apps.AppNomadConfig',
+    'books.apps.BooksConfig',
+    'polls.apps.PollsConfig',
 ]
 
 MIDDLEWARE = [

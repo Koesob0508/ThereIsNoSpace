@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomeView.as_view(), name='home'),
     path('nomad/', include('app_nomad.urls')),
+    path('books/', include('books.urls')),
+    path('polls/', include('polls.urls')),
 ]
