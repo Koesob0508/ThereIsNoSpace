@@ -6,5 +6,11 @@
 <p>Phone Number : {{ object.phone_number }}</p>
 <p>URL : {{ object.url }}</p>
 <p>Content : {{ object.content }}</p>
+<p>Near coworking spaces : </p>
+<ul>
+    {% for coworking in object.near_coworking_spaces.all %}
+        <li><a href="{% url 'nomad:coworking_detail' pk=coworking.pk %}">{{ coworking.name }}</a></li>
+    {% endfor %}
+</ul>
 <a class="btn btn-default" href="{% url 'nomad:accommodation_edit' pk=accommodation.pk %}"><span class="glyphicon glyphicon-pencil">Edit Accommodation</span></a>
 {% endblock content %}
