@@ -4,15 +4,17 @@
 <h1>{{ object.name }}</h1>
 <br>
 <li>Coworking Spaces : 
-    {% for coworking in object.coworking_set.all %}
-        {{ coworking }}
-        {% if not forloop.last %},{% else %}{% endif %}
-    {% endfor %}
+    <ul>
+        {% for coworking in object.coworking_set.all %}
+            <li><a href="{% url 'nomad:coworking_detail' coworking.id %}">{{ coworking.name }}</a></li>
+        {% endfor %}
+    </ul>
 </li>
 <li>Accommodations : 
-    {% for accommodation in object.accommodation_set.all %}
-        {{ accommodation }}
-        {% if not forloop.last %},{% else %}{% endif %}
-    {% endfor %}
+    <ul>
+        {% for accommodation in object.accommodation_set.all %}
+            <li><a href="{% url 'nomad:accommodation_detail' accommodation.id %}">{{ accommodation.name }}</a></li>
+        {% endfor %}
+    </ul>
 </li>
 {% endblock content %}
